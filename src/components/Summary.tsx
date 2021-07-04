@@ -25,7 +25,7 @@ function Summary(props: TypeProps) {
       <h2>Summary </h2>
       {props.itemArrays?.map((productArray, i) => {
         return (
-          <div className="summary-item" key={`${productArray[i] + i}`}>
+          <div className="summary-item" key={`${productArray[0] + i}`}>
             {productArray.length} x {productNames[productArray[0]]}
           </div>
         );
