@@ -19,37 +19,31 @@ export const offerings = [
   },
 ];
 
-export const companyName = {
-  secondBite: "SecondBite",
-  axilCoffee: "Axil Coffee Roasters",
-  myer: "MYER",
-};
-
 export const splPricing = {
   secondBite: [
     {
-      offer: ["CA", "CA", "CA"],
-      price: 269.99 * 2,
+      splOffer: ["CA", "CA", "CA"],
+      splPrice: 269.99 * 2,
       statement: "Get a 3 for 2 deal on Classic Ads",
     },
   ],
   axilCoffee: [
     {
-      offer: ["SOA"],
-      price: 299.99,
+      splOffer: ["SOA"],
+      splPrice: 299.99,
       statement:
         "Get a discount on Stand out Ads where the price drops to $299.99 per ad",
     },
   ],
   myer: [
     {
-      offer: ["SOA", "SOA", "SOA", "SOA", "SOA"],
-      price: 322.99 * 4,
+      splOffer: ["SOA", "SOA", "SOA", "SOA", "SOA"],
+      splPrice: 322.99 * 4,
       statement: "Get a 5 for 4 deal on Stand out Ads",
     },
     {
-      offer: ["PA"],
-      price: 389.99,
+      splOffer: ["PA"],
+      splPrice: 389.99,
       statement:
         "Get a discount on Premium Ads where the price drops to $389.99 per ad",
     },

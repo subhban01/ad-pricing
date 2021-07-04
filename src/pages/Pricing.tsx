@@ -9,7 +9,7 @@ import PriceCard from "components/PriceCard";
 import { useHistory } from "react-router-dom";
 
 function Pricing() {
-  const { data } = useRecruiterInfoStore();
+  const { data, setApplicableOffers } = useRecruiterInfoStore();
   const { setCheckoutData } = usecheckoutDataStore();
   const [offerTexts, setofferTexts] = useState("");
   const [checkoutArray, setCheckoutArray] = useState<string[][]>();
@@ -27,16 +27,16 @@ function Pricing() {
           .replace(/ /g, "")
           .includes(customer?.trim().toUpperCase())
       ) {
+        setApplicableOffers(sPricing[customer]);
         for (const offer of sPricing[customer]) {
           offerStatement += `${offer.statement}\n`;
         }
         setofferTexts(offerStatement);
       }
     }
-  }, [data?.companyName]);
+  }, [data?.companyName, setApplicableOffers]);
 
   const handleChange = (itemCode: string, count: number) => {
-    console.log(count, itemCode);
     let result = checkoutArray ?? [];
     let arr = [];
     while (count > 0) {

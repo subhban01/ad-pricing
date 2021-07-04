@@ -1,6 +1,6 @@
 export interface TypePricingData {
-  offer: string[];
-  price: number;
+  splOffer: string[];
+  splPrice: number;
   statement: string;
 }
 
