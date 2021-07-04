@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import useRecruiterInfoStore from "store/recruiterInfo";
+import usecheckoutDataStore from "store/checkoutDataStore";
 import { splPricing, offerings } from "adPricing";
 import { TypeSplPricingData } from "types/TypePricingData";
 import PriceCard from "components/PriceCard";
@@ -9,6 +10,7 @@ import { useHistory } from "react-router-dom";
 
 function Pricing() {
   const { data } = useRecruiterInfoStore();
+  const { setCheckoutData } = usecheckoutDataStore();
   const [offerTexts, setofferTexts] = useState("");
   const [checkoutArray, setCheckoutArray] = useState<string[][]>();
   const history = useHistory();
@@ -45,12 +47,13 @@ function Pricing() {
     for (let i = 0; i < offerings.length; i++) {
       switch (itemCode) {
         case offerings[i].code:
-          result[0] = arr;
+          result[i] = arr;
           break;
       }
     }
 
     setCheckoutArray(result);
+    setCheckoutData(result);
   };
 
   function handleClick() {
@@ -85,7 +88,7 @@ function Pricing() {
             );
           })}
         </div>
-        <Button className="total" onClick={handleClick}>
+        <Button variant="contained" onClick={handleClick}>
           Checkout
         </Button>
       </Paper>
