@@ -36,7 +36,6 @@ export default function calculateTotal(): number {
           priceObj[item].toString()
         );
       }
-      console.log(addedItemsString);
       addedItemsString.split(",").forEach((price) => {
         total += parseFloat(price);
       });

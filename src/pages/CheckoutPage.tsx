@@ -4,10 +4,12 @@ import Button from "@material-ui/core/Button";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Summary from "components/Summary";
 import usecheckoutDataStore from "store/checkoutDataStore";
+import recruiterInfo from "store/recruiterInfo";
 import calculateTotal from "utils/calculateTotal";
 
 export default function CheckoutPage() {
   const { data } = usecheckoutDataStore();
+  const { offers } = recruiterInfo();
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [total, setTotal] = useState(0);
@@ -36,7 +38,10 @@ export default function CheckoutPage() {
       <header>Checkout</header>
       <Paper elevation={2} className="paper">
         <Summary itemArrays={data} />
-        <h4>Total: ${total}</h4>
+        <h4>
+          Total: ${total}{" "}
+          <span>{offers ? "(after applying relevant offers)" : ""}</span>
+        </h4>
         <Button
           onClick={handleButtonClick}
           className={success ? "success" : "pay"}
