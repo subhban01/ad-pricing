@@ -1,8 +1,23 @@
-export const retailPricing = {
-  CA: 269.99,
-  SOA: 322.99,
-  PA: 394.99,
-};
+export const offerings = [
+  {
+    title: "Classic Ad",
+    desc: "Offers the most basic level of advertisement",
+    price: 269.99,
+    code: "CA",
+  },
+  {
+    title: "Stand out Ad",
+    desc: "Allows advertisers to use a company logo and use a longer presentation text",
+    price: 322.99,
+    code: "SOA",
+  },
+  {
+    title: "Premium Ad",
+    desc: "Same benefits as Standout Ad, but also puts the advertisement at the top of the results, allowing higher visibility",
+    price: 394.99,
+    code: "PA",
+  },
+];
 
 export const companyName = {
   secondBite: "SecondBite",
@@ -14,7 +29,7 @@ export const splPricing = {
   secondBite: [
     {
       offer: ["CA", "CA", "CA"],
-      price: retailPricing.CA * 2,
+      price: 269.99 * 2,
       statement: "Get a 3 for 2 deal on Classic Ads",
     },
   ],
@@ -29,7 +44,7 @@ export const splPricing = {
   myer: [
     {
       offer: ["SOA", "SOA", "SOA", "SOA", "SOA"],
-      price: retailPricing.SOA * 4,
+      price: 322.99 * 4,
       statement: "Get a 5 for 4 deal on Stand out Ads",
     },
     {
