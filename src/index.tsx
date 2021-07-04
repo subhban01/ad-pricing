@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./pages/App";
 import Pricing from "./pages/Pricing";
+import CheckoutPage from "./pages/CheckoutPage";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -12,6 +13,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/pricing" component={Pricing} />
+        <Route path="/checkout" component={CheckoutPage} />
       </Switch>
     </Router>
   </React.StrictMode>,
