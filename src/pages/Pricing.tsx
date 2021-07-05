@@ -64,7 +64,7 @@ function Pricing() {
     <>
       <header>Pricing</header>
       {offerTexts && (
-        <div className="message">
+        <div className="message" data-testid="message">
           Hello {data?.firstName || "user"}, as a priviledged customer, we have
           the below special pricing for you:
           <strong>{`${offerTexts}\n`}</strong>

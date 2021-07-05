@@ -29,6 +29,7 @@ function PriceCard(props: TypeProps) {
           label="Count"
           inputRef={countRef}
           onChange={handleChange}
+          type="number"
         />
       </div>
     </Card>
