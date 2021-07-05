@@ -68,8 +68,7 @@ function Pricing() {
           Hello {data?.firstName || "user"}, as a priviledged customer, we have
           the below special pricing for you:
           <strong>{`${offerTexts}\n`}</strong>
-          [Final price will be shown in checkout section after you confirm
-          selection]
+          <em>[Final price will be shown in the checkout page]</em>
         </div>
       )}
 

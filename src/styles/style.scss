@@ -50,7 +50,8 @@ header {
   width: 70vw;
   border-radius: 5px;
   color: #fff;
-  padding: 20px 0;
+  padding: 20px;
+  white-space: pre-wrap;
 }
 
 .MuiFormControl-root.count {
@@ -75,4 +76,20 @@ header {
 
 .summary-item {
   margin: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  .pricing-card-container {
+    flex-flow: column;
+  }
+
+  .pricing-card-container > .price-card {
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  .message {
+    margin: 0 auto 30px;
+    width: 90vw;
+  }
 }
